@@ -5,7 +5,7 @@ function Page404() {
   return (
     <div>
     <Header></Header>
-      Page404
+     
     </div>
   )
 }
