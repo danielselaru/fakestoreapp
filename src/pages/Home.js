@@ -4,7 +4,7 @@ import Api_link from '../api/Api_link'
 
 function Home() {
   return (
-    <div className='home'>
+    <div>
       <Header></Header>
       <Api_link></Api_link>
     </div>
