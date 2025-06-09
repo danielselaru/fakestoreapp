@@ -8,8 +8,11 @@ function Home() {
     <div>
       <Header></Header>
       <Api_link></Api_link>
-      Welcome to our store
+
+      
+      
       </div>
-)}
+)
+}
 
 export default Home

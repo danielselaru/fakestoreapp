@@ -5,7 +5,7 @@ function About() {
   return (
      <div>
       <Header></Header>
-      About
+      
     </div>
   )
 }
