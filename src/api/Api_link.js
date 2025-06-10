@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import "./api_link.css"
+import { Link } from 'react-router-dom'
 
 function Api_link() {
   const [data, setData] = useState([])
@@ -17,7 +19,7 @@ function Api_link() {
     // const uniqueTags = [];
     
     const description = data.map((e,i) =>{
-       
+       let id_product = e.id;
      
         // var findItem = uniqueTags.find((x) => x.category === e.category);
         // if (!findItem) uniqueTags.push(e.category);
@@ -25,15 +27,17 @@ function Api_link() {
         return(
           <div key={i}>
               
-                <p>
+                <div>
                     {i}
                       <span> - {e.category}  - {e.description } - {e.price} 
                         <div >
-                               <img src={e.image} className={`size`}/> 
+                               <img src={e.image} alt="" className="size"/> 
                         </div>
                       </span>
-                </p>
-              
+                </div>
+              <div>
+                <Link to={`/product/${id_product}`}>Detalii</Link>
+              </div>
             </div>
         )
     })
