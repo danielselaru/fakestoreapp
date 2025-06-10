@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../header/Header'
-import Api_link from '../api/Api_link'
 import { useParams } from 'react-router-dom'
 
 
