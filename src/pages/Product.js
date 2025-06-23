@@ -14,15 +14,23 @@ function Product() {
       .then(response => response.json())
       .then(data => setData(data));
   }, [])
-  console.log(data)
-  console.log(id)
+  //console.log(data)
 
+  //console.log(id)
+  
+  
+  let filteredProduct = data.filter((product) => {
+    return product.id == id
+  });
+  console.clear();
+  console.log(filteredProduct);
+ 
 
   return (
     <div>
       <Header></Header>
-
-
+      <h1>Product</h1>
+      
     </div>
   )
 }
