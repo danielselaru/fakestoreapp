@@ -10,7 +10,7 @@ function Header() {
     
         <Link to="/about" className='about'>About</Link>
      
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact" className='contact'>Contact</Link>
 
         
      

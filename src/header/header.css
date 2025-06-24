@@ -8,16 +8,9 @@
     margin-left: 50px;
 }
 
-.home{
+.home,.about,.contact{
     margin-right: 100px;
     gap: 20px;
-    font-size: large;
-    
-}
+    font-size: 20px;
 
-
-.about{
-    margin-right: 100px;
-    gap: 20px;
-    font-size: large;
 }
