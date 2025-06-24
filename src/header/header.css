@@ -4,20 +4,20 @@
 }
 
 .header{
+    margin-top: 10px;
     margin-left: 50px;
 }
 
 .home{
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.home{
     margin-right: 100px;
     gap: 20px;
+    font-size: large;
+    
 }
+
 
 .about{
     margin-right: 100px;
     gap: 20px;
+    font-size: large;
 }
