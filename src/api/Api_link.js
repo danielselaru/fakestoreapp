@@ -18,22 +18,20 @@ function Api_link() {
 
     // const uniqueTags = [];
     
-    const description = data.map((e,i) =>{
+    const description = data.map((e) =>{
        let id_product = e.id;
      
         // var findItem = uniqueTags.find((x) => x.category === e.category);
         // if (!findItem) uniqueTags.push(e.category);
        
         return(
-          <div key={i}>
-              
+          <div >
                 <div>
-                    {i}
-                      <span> - {e.category}  - {e.description } - {e.price} 
+                    <span>{e.id} - {e.category}  - {e.description } - {e.price} 
                         <div >
                                <img src={e.image} alt="" className="size"/> 
                         </div>
-                      </span>
+                    </span>
                 </div>
               <div>
                 <Link to={`/product/${id_product}`}>Detalii</Link>

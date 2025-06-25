@@ -25,10 +25,10 @@ function Product() {
   console.clear();
   console.log(filteredProduct);
   
-    const result = filteredProduct.map((e,i) => {
+    const result = filteredProduct.map((e) => {
         return (
             <div >
-                <p>{i}</p>
+                <p>{e.id}</p>
                 <img src={e.image} alt='' className='image'>
                 </img>
                 <h2>{e.rating.rate}</h2>
@@ -42,7 +42,7 @@ function Product() {
   return (
     <div>
       <Header></Header>
-      <h1>Product</h1>
+      <h1 className='ProductHeader'>Product</h1>
       {result}
     </div>
   )
