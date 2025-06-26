@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Page404 from "./pages/Page404";
 import Product from "./pages/Product";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Page404 />} />
           <Route path="/product/:id" element={<Product />} />
+          <Route path="/category/:categoryName" element={<Category />} />
       </Routes>
     </BrowserRouter>
       
