@@ -34,7 +34,7 @@ function Api_link() {
       const productCategories= productCategory.map((e) => {
       
       return (
-          <div>
+          <div className='categoryClass'>
              <Link to={`/category/${e}`} className='Category'>{e}</Link>
           </div>
       )
