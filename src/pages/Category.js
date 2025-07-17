@@ -11,7 +11,7 @@ function Category() {
   console.log(elements)
 
    let filteredCategory = elements.filter((e) => {
-    return e.category == categoryName
+    return e.category === categoryName
   });
   console.clear();
   console.log(filteredCategory);
