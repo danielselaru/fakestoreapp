@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import "./api_link.css"
 import { Link } from 'react-router-dom'
+import useElements from '../hooks/useElements'
 
 function Api_link() {
-  const [data, setData] = useState([])
 
-    const link = "https://fakestoreapi.com/products"
+  const elements = useElements()
+//   const [data, setData] = useState([])
+
+//     const link = "https://fakestoreapi.com/products"
    
  
-   useEffect(() => {
-    fetch(link)
-    .then(response => response.json())
-    .then(data => setData(data));
-},[])
-    console.clear(data)
-    console.log(data)
+//    useEffect(() => {
+//     fetch(link)
+//     .then(response => response.json())
+//     .then(data => setData(data));
+// },[])
+//     console.clear(data)
+//     console.log(data)
 
     // const uniqueTags = [];
     // const productCategory = data.map((e) => {
@@ -27,7 +30,7 @@ function Api_link() {
     // })
     
 
-     const productCategory = [...new Set(data.map(e=>e.category)) ]
+     const productCategory = [...new Set(elements.map(e=>e.category)) ]
       //  const x = [...new Set(productCategory) ]
       console.log(productCategory)
 
@@ -40,7 +43,7 @@ function Api_link() {
       )
     })
 
-    const description = data.map((e) =>{
+    const description = elements.map((e) =>{
        let id_product = e.id;
      
         // var findItem = uniqueTags.find((x) => x.category === e.category);
@@ -52,11 +55,17 @@ function Api_link() {
               <Link to={`/category/${e.category}`} className='Category'>{e.category}</Link>
            </div> */}
                 <div>
-                    <div>{e.id} - {e.category}  - {e.description } - {e.price} 
+                    <div>   
+                      <p>{e.id}</p>
+                      <h2>{e.category}</h2>
+                      <p>{e.description }</p>
+                      <p>{e.price}</p>
+                    </div>
+                      
                         <div >
                                <img src={e.image} alt="" className="size"/> 
                         </div>
-                    </div>
+                   
                 </div>
               <div>
                 <Link to={`/product/${id_product}`}>Detalii</Link>

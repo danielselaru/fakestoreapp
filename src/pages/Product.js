@@ -2,25 +2,29 @@ import React, { useEffect, useState } from 'react'
 import Header from '../header/Header'
 import { useParams } from 'react-router-dom'
 import "./product.css"
+import useElements from '../hooks/useElements'
+
 
 function Product() {
   const {id} = useParams()
-  const [data, setData] = useState([])
-  const link = "https://fakestoreapi.com/products"
+  // const [data, setData] = useState([])
+  // const link = "https://fakestoreapi.com/products"
 
 
-  useEffect(() => {
-    fetch(link)
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, [])
+  // useEffect(() => {
+  //   fetch(link)
+  //     .then(response => response.json())
+  //     .then(data => setData(data));
+  // }, [])
+
+
   //console.log(data)
 
   //console.log(id)
+  const elements = useElements()
   
-  
-  let filteredProduct = data.filter((product) => {
-    return product.id == id
+  let filteredProduct = elements.filter((product) => {
+    return product.id === id
   });
   console.clear();
   console.log(filteredProduct);
