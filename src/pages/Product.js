@@ -20,28 +20,30 @@ function Product() {
 
   //console.log(data)
 
-  //console.log(id)
+  // console.log(id)
+ 
   const elements = useElements()
   
   let filteredProduct = elements.filter((product) => {
-    return product.id === id
+    return product.id == id
   });
-  console.clear();
-  console.log(filteredProduct);
+  // console.clear();
+   console.log(filteredProduct);
   
     const result = filteredProduct.map((e) => {
         return (
             <div >
-                <p>{e.id}</p>
+                <p className='title'>Title : {e.title}</p>
+                <p className='description'> Description : {e.description}</p>
                 <img src={e.image} alt='' className='image'>
                 </img>
-                <h2>{e.rating.rate}</h2>
+                <h2>Price : {e.price}</h2>
                
             </div>
         )
     })
     
-    console.log(result)
+    // console.log(result)
 
   return (
     <div>

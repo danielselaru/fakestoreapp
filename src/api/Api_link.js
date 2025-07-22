@@ -53,7 +53,7 @@ function Api_link() {
           <div >
             {/* <div>
               <Link to={`/category/${e.category}`} className='Category'>{e.category}</Link>
-           </div> */}
+           </div>  */}
                 <div>
                     <div>   
                       <p>{e.id}</p>

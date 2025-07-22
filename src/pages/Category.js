@@ -13,7 +13,7 @@ function Category() {
    let filteredCategory = elements.filter((e) => {
     return e.category === categoryName
   });
-  console.clear();
+  // console.clear();
   console.log(filteredCategory);
   
     const result = filteredCategory.map((e) => {
